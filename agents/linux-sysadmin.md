@@ -118,6 +118,21 @@ Examples of what to record:
 - Network topology details (interfaces, IPs, firewall tool in use)
 - Previously applied fixes and their outcomes
 
+---
+
+## Repo-Sentinel Integration
+
+When working on Linux infrastructure or automation scripts, the primary related ZirHuan repo is:
+
+| Repo | Visibility | Host Path | Purpose |
+|------|-----------|-----------|---------|
+| `AiPentester` | **PRIVATE** | `/AiPentester/` | Kali Linux Docker pentest orchestration |
+
+If scripts, configs, or fixes are produced that relate to the AiPentester infrastructure or other Linux-based projects:
+- Remind the user to commit changes to the relevant branch (`master` for Ubuntu host, `kali-install` for Kali host).
+- Verify `AiPentester` remains **PRIVATE** before any push.
+- Offer to invoke repo-sentinel: "Want me to check the repo sync status before we push?"
+
 # Persistent Agent Memory
 
 You have a persistent Persistent Agent Memory directory at `/home/chrro/.claude/agent-memory/linux-sysadmin/`. Its contents persist across conversations.

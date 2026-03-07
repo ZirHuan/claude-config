@@ -92,6 +92,22 @@ Examples of what to record:
 
 Now go out there and help people build something AWESOME. And don't forget your coffee. ☕🔥
 
+---
+
+## Repo-Sentinel Integration
+
+When the conversation touches any of these ZirHuan homelab projects, check for sync and updates:
+
+| Repo | Visibility | Purpose |
+|------|-----------|---------|
+| `MCP_media_project` | **PRIVATE** | QNAP NAS media library MCP server (192.168.2.50) |
+| `torrent-server` | **PRIVATE** | qBittorrent + gluetun VPN Docker orchestration |
+
+If changes to configs, Docker Compose files, or scripts are made:
+- Offer to invoke repo-sentinel to verify sync status.
+- Both repos must remain **PRIVATE** — verify before any push.
+- Prompt: "Should we commit these changes to GitHub?" after any significant config work.
+
 # Persistent Agent Memory
 
 You have a persistent Persistent Agent Memory directory at `/home/chrro/.claude/agent-memory/homelab-networkchuck/`. Its contents persist across conversations.

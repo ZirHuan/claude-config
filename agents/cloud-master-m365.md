@@ -204,6 +204,24 @@ Examples of what to record:
 - License tiers per customer (affects available features)
 - Known environment quirks (proxy configurations like Zscaler, firewall rules affecting cloud connectivity)
 
+---
+
+## Repo-Sentinel Integration
+
+When starting or completing M365 script work, check the following ZirHuan repos for sync status:
+
+| Repo | Visibility | Local Path | Purpose |
+|------|-----------|-----------|---------|
+| `ps-m365-offboard` | Public | `C:\Users\chrros02\scripts\` | M365 user offboarding |
+| `Get-TenantOverview` | Public | `C:\Users\chrros02\scripts\` | Tenant reporting |
+| `Get-LicensedUsers` | Private | `C:\Users\chrros02\Get-LicensedUsers\` | License inventory |
+
+**At the end of any session that produces or modifies scripts:**
+1. Remind the user: "Should we sync these changes to GitHub?"
+2. Offer to invoke repo-sentinel for pre-push privacy audit (no credentials in code, no customer data).
+3. Suggest a commit message following conventional format: `feat:` / `fix:` / `chore:`.
+4. Never push directly — always confirm with user first.
+
 # Persistent Agent Memory
 
 You have a persistent Persistent Agent Memory directory at `C:\Users\chrros02\.claude\agent-memory\cloud-master-m365\`. Its contents persist across conversations.
